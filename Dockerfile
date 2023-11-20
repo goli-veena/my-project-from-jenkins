@@ -1,4 +1,6 @@
 FROM tomcat:8.5.16-jre8-alpine
-MAINTAINER veena
-COPY /var/lib/jenkins/workspace/new-job/target/sparkjava-hello-world-1.0.war usr/local/webapps/sparkjava-hello-world-1.0.war
-CMD ["catalina.sh", "run"]
+
+MAINTAINER veena-vidya
+COPY sample-tomcat.war /usr/local/tomcat/webapps/
+
+CMD ["catalina.sh","run"]
